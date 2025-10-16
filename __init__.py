@@ -17,7 +17,7 @@ plugin = NekroPlugin(
     name="二游语音生成插件",
     module_name="anime_tts",
     description="AI 自主选择语音模型使用 TTS 生成语音并直接发送语音条",
-    version="0.1.0",
+    version="0.1.1",
     author="Jerry_FaGe",
     url="https://github.com/Jerry-FaGe/nekro-plugin-anime-tts",
 )
@@ -34,7 +34,7 @@ class TtsMsgConfig(ConfigBase):
     TTS_API_TOKEN: str = Field(
         default="None",
         title="TTS API TOKEN",
-        description="注册登录后通过 <a href='https://gsv.acgnai.top/token' target='_blank'>AI Hobbyist TTS</a> 获取令牌",
+        description="注册登录后在上述网站右上角用户名处获取访问令牌",
     )
 
 # 获取配置实例
@@ -69,7 +69,7 @@ async def _make_request(method: str, url: str, json: Optional[dict] = None) -> d
 )
 async def get_tts_model(_ctx: AgentCtx) -> str:
     """获取所有生成语音可用的模型"""
-    data = await _make_request("POST", "models", json={"version": "v4"})
+    data = await _make_request("POST", "models/v4")
     data = data.get("models")  # dict[str, dict[str, list[str]]] | None
     return f"[get_tts_model Results]\n{data}\n这是语音生成接口可用的全部模型，键为模型名，值为该模型可用的语言字典，语言字典内为语气列表，请根据用户要求从中选择一个最合适的。"
 

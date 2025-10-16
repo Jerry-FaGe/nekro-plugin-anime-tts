@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nekro-plugin-anime-tts"
-version = "0.1.0"
+version = "0.1.1"
 description = "AI 自主选择语音模型使用 TTS 生成语音并直接发送语音条"
 authors = ["Jerry_FaGe <jerry_fage@foxmail.com>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ repository = "https://github.com/Jerry-FaGe/nekro-plugin-anime-tts"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-nekro-agent = ">=1.0.0"
+nekro-agent = ">=2.0.0"
 
 
 [build-system]

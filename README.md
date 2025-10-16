@@ -34,10 +34,10 @@
 ### 3. 获取并配置 Token
 
 1.  访问 [AI Hobbyist TTS](https://gsv.acgnai.top/) 网站并注册一个账户。
-2.  登录后，访问 [令牌页面](https://gsv.acgnai.top/token) 获取你的 API Token。
+2.  登录后，在右上角用户名处获取你的访问令牌。
 3.  在 NekroAgent 的插件配置页面中，找到本插件的配置项：
     - `TTS_API_URL`: 保持默认的 `https://gsv2p.acgnai.top` 即可，除非服务地址有变动。
-    - `TTS_API_TOKEN`: 填入你在上一步获取到的 Token。
+    - `TTS_API_TOKEN`: 填入你在上一步获取到的访问令牌。
 
 ## 🔧 使用说明
 
